@@ -1,6 +1,17 @@
-let x = 12
-let y = 35
+import express from "express"
 
-console.log(x + y)
+const app = express()
 
-console.log("hello my name is viktor.") 
+app.get("/", (req, res) =>{
+    res.send("hello te23 välkommen!<h1>")
+})
+
+app.get("/about", (req, res) => {
+    res.json({
+        "message": "hatisk textbox"
+    })
+})
+
+app.listen(3000, () => {
+    console.log("server is runing on http://localhost:3000")
+})
